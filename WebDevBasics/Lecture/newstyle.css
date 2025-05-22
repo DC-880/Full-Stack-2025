@@ -1,0 +1,21 @@
+.bg_col_font_effect {
+    color: green;
+    background-color: brown;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.a:hover {
+    background-color: yellow;
+}
+
+.para {
+    color: rgb(67, 22, 22);
+    background-color: rgb(31, 59, 83);
+    width: 50%;
+    height: 200px;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    border: 10px;
+}

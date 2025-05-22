@@ -1,0 +1,30 @@
+#submit {
+    background-color: red;
+    color: white;
+    width: 50%;
+    height: 30px;
+    border-radius: 11px;
+    border: 1px solid navy;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: orange;
+    color: blue;
+}
+
+.container {
+    text-align: center;
+}
+
+
+.hover:hover {
+    background-color: orange;
+    color: blue;
+}
+
+/* body {
+    background-image: url();
+    background-size: ;
+    background-repeat: no-repeat;
+} */
