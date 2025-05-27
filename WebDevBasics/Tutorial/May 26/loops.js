@@ -32,7 +32,23 @@ for (let i in names){
 names.forEach( (i) => console.log("using for each ", i));
 
 
-// let val = 0;
-// while(val <10){
-//     console.log("while loop ", val);
+let val = 0;
+while(val <10){
+    val++;
+    console.log("while loop ", val);
+}
+
+
+var two_dim_arr = [
+    ["Harsh", "Gurm", 25],
+    ["Dan", "Christakos", 26]
+    ["George", "Brown", 35]
+]
+
+console.log(two_dim_arr[0][0])
+
+// for(let i in names) {
+//     if(names[i] == "John"){
+//     console.log(names[i]);
+//     }
 // }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+    <link rel="stylesheet" href="newstyle.css">
+
+    <script src="index.js" src="../May 27/classes.js"></script>
+    
+</head>
+<body>
+      <a href="home.html">home</a>
+
+    <label>Username:</label>
+    <input type="text" placeholder="enter your username"> <br><br>
+
+    <span class = "error" id = "username_error"></span>
+
+    <label>Password:</label>
+    <input type="text" placeholder="enter your password"> <br><br>
+
+    
+    <label>Remember Me</label> 
+    <input type="checkbox"> <label for="Remember Me"></label>
+    <button id="submit" type="button" onclick="Submit()">submit</button>
+    <input type="submit" value="Submit">
+
+  
+
+    <p class="para">this is to check external css function</p>
+    
+
+    <script>
+        function Submit {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if(username === null || username.length <= 3 || username === "") {
+                document.getElementById("username_error").style.display = "block"
+                return
+            }
+            else
+            document.getElementById("username_error").style.display = "none";
+
+            const data = {username: username, password: password}
+        }
+
+       
+    </script>
+    
+</body>
+</html>

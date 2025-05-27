@@ -1,5 +1,6 @@
 body{
     text-align: center;
     background-image: url("starwars.jpg");
-    background-size: cover;
+    background-size: 100% 475%;
+    color: white;
 }
