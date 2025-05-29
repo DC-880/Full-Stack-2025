@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ProjectStyle.css">
+    <title>Create an Account</title>
+</head>
+<body>
+    <h1>Create an Account</h1>
+
+    <form action="action.php" method="POST">
+        First Name <input name="first_name" type="text" placeholder="First Name" required>
+        Last Name <input name="last_name" type="text" placeholder="Last name" required> <br>
+        
+        Month <select name="month" id="month">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+            </select>
+
+            <input name="day" type="number">
+            <input name="year" type="number"> <br>
+
+
+            Male <input type="radio" name="male">
+            Female <input type="radio" name="female">
+            Prefer Not to Say <input type="radio" name="undetermined">
+            
+
+            <!-- gender <select name="gender" id="gender" >
+            <option disabled selected>select gender</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="not_to_answer">prefer not to answer</option>
+            </select> <br> -->
+
+        Email <input type="email" name="email" required>
+
+
+
+
+
+        Password <input name="password" type="password" required minlength="8">
+        
+        
+
+        <button>Sign Up</button>
+        
+        </form>
+</body>
+</html>

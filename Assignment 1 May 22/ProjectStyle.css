@@ -1,6 +1,28 @@
 body{
     text-align: center;
     background-image: url("starwars.jpg");
-    background-size: 100% 475%;
-    color: white;
+    background-size: 100% 221%;
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.linkColor{
+    color: rgb(0, 255, 42);
+}
+
+.saberImage{
+    width: 6%;
+    height: 30%;
+    margin-left: -110px;
+    border-color: aqua;
+}
+
+.lightsaber:hover {
+    background-color: rgb(5, 204, 5);
+}
+
+
+.textBox{
+    
 }
