@@ -10,8 +10,8 @@
     <h1>Create an Account</h1>
 
     <form action="action.php" method="POST">
-        First Name <input name="first_name" type="text" placeholder="First Name" required>
-        Last Name <input name="last_name" type="text" placeholder="Last name" required> <br>
+        First Name <input name="first_name" type="text" required>
+        Last Name <input name="last_name" type="text" required> <br><br>
         
         Month <select name="month" id="month">
             <option value="January">January</option>
@@ -28,13 +28,13 @@
             <option value="December">December</option>
             </select>
 
-            <input name="day" type="number">
-            <input name="year" type="number"> <br>
+            <input name="day" type="number" placeholder="Day">
+            <input name="year" type="number" placeholder="Year"> <br> <br>
 
 
             Male <input type="radio" name="male">
             Female <input type="radio" name="female">
-            Prefer Not to Say <input type="radio" name="undetermined">
+            Prefer Not to Say <input type="radio" name="undetermined"> <br> <br>
             
 
             <!-- gender <select name="gender" id="gender" >
@@ -44,18 +44,20 @@
             <option value="not_to_answer">prefer not to answer</option>
             </select> <br> -->
 
-        Email <input type="email" name="email" required>
+        Email <input style="margin-right: 34px;" type="email" name="email" required>
 
 
 
 
 
-        Password <input name="password" type="password" required minlength="8">
+        Password <input name="password" type="password" required minlength="8"> <br> <br>
         
         
 
-        <button>Sign Up</button>
+        <button class="lightsaber" style="width: 250px;">Sign Up</button>
         
-        </form>
+        </form> <br> <br>
+
+        <a class="linkColor" href="ProjectSignIn.html">Sign in Here</a>
 </body>
 </html>

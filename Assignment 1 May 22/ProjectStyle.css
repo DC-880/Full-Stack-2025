@@ -1,7 +1,11 @@
 body{
     text-align: center;
     background-image: url("starwars.jpg");
-    background-size: 100% 221%;
+    /* background-size: 100% 221%; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
     color: yellow;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -18,11 +22,43 @@ body{
     border-color: aqua;
 }
 
+.lightsaber {
+    border-radius: 10%;
+    
+}
+
 .lightsaber:hover {
     background-color: rgb(5, 204, 5);
 }
 
 
-.textBox{
-    
+.image{
+    width:20%;
+    margin-bottom: 24px;
+}
+
+
+.table {
+    font-size: larger;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 10px solid;
+    border-color: rgb(7, 209, 7);
+    height: 50%;
+    width: 40%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 10px solid;
+    border-color: rgb(7, 209, 7);
+    border-collapse: collapse;
+}
+
+.linkButton {
+    display: inline-block;
+    border: 2px solid green;
 }

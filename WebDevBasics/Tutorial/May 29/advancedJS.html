@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2 id="into">Heading 2</h2>
+    <p id="para">Paragraph</p>
+    <p class="test">Paragraph</p>
+    <div class="test">DIV</div>
+</body>
+    <script>
+        var test = document.getElementById("into").innerText="HG is hereZ!!";
+        console.log(test);
+
+        var test2 = document.getElementById("para").innerHTML="<h2>Dan is Here!!!</h2>"
+        console.log(test2)
+
+        var class_test = document.getElementsByClassName("test")
+        console.log("HERE", class_test)
+        class_test[0].innerHTML = "UPDATED TEXT"
+
+        var para = document.getElementsByTagName('p'); 
+        console.log(para)
+        para[1].style.color = "red"
+        para[0].style.background = "blue"
+       
+
+        var class_test = document.getElementsByClassName("test")
+        class_test[1].innerText = "UPDATED TEXTZ"
+        console.log("HERE", class_test)
+
+        var elem = document.createElement('div');
+        elem.innerHTML = "<p> I have added this paragrapg </p> <h1> a new header </h1>";
+        elem.innerHTML = "<h2> new header </h2>" + elem.innerHTML;
+        document.body.appendChild(elem);
+
+    </script>
+</html>
