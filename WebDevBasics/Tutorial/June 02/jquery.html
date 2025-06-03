@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Intro</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+
+            // $(selector).function();
+            $(document).ready(function() {
+
+                $("h1").html("<h3> This is New Hello");
+                $("h4").text("This is the changed text!!");
+                $("#para").css({ "color": "red" });
+                $("h1").addClass("color");
+                // $("p").removeClass("paragraph");
+                $(".paragraph").html("<h4> Changed to header");
+
+                $("button").click(function(){
+                   $("#para").toggle();
+
+                //    $("#para").show();
+
+                //    $("#para").hide();
+                })
+
+                $("#flip").click(function() {
+                    console.log("message")
+                    let f = $("#expand").slideDown();
+                    // if (f = true) {
+                    //     $("#expand").slideUp();
+                    // }
+                    
+                })
+
+                $("#unflip").click(function() {
+                    $("#expand").slideUp();
+                })
+
+                $("img_turn_on").click(function() {
+                    $("img").attr("src", "put link here");
+                })
+            });
+
+        </script>
+    <style>
+        .color {
+            color: blue;
+            background-color: yellow;
+            font-size: 30px;
+        }
+
+        #expand {
+            padding: 50px;
+            display: none;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1>Hello World!!!</h1>
+    <p id="para">Paragraph</p>
+    <p class="paragraph">paragraph class</p>
+
+    <h4>Lengthy tewxt</h4>
+    <div id="flip">Click to slide</div>
+    <div id="expand">
+        <p>Para in div</p>
+        <p id="test">This is my second paragraphg</p>
+    </div>
+    <span class="rob">SPAn tag</span>
+    <button>Click</button>
+    <button id="unflip">Slide it back</button>
+</body>
+
+</html>

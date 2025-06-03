@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <script src="hangmanJS.js"></script>
+</head>
+
+<style>
+    .incorrect,
+    .correct {
+        color: red;
+        display: none;
+    }
+
+    .buttonPlace {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .buttonPlace>button {
+        width: 167px;
+    }
+
+    .spanPlace>span {
+        padding-right: 90px;
+        position: fixed;
+    }
+</style>
+
+<body>
+    <h1>HANGMAN</h1>
+
+
+    <input type="text" id="guess1" class="guess">
+    <input type="text" id="guess2" class="guess">
+    <input type="text" id="guess3" class="guess">
+    <input type="text" id="guess4" class="guess">
+    <input type="text" id="guess5" class="guess"> <br> <br>
+
+
+    <div class="buttonPlace">
+        <button onclick="Verify('guess1', 'S')">Guess</button>
+        <button onclick="Verify('guess2', 'T')">Guess</button>
+        <button onclick="Verify('guess3', 'A')">Guess</button>
+        <button onclick="Verify('guess4', 'C')">Guess</button>
+        <button onclick="Verify('guess5', 'K')">Guess</button>
+    </div>
+
+    <div class="spanPlace">
+        <span id="incorrect-guess1" class="incorrect">Try Again</span>
+        <span id="incorrect-guess2" class="incorrect">Try Again</span>
+        <span id="incorrect-guess3" class="incorrect">Try Again</span>
+        <span id="incorrect-guess4" class="incorrect">Try Again</span>
+        <span id="incorrect-guess5" class="incorrect">Try Again</span>
+    </div>
+
+
+    <div class="spanPlace">
+        <span id="correct-guess1" class="correct">You Got It!</span>
+        <span id="correct-guess2" class="correct">You Got It!</span>
+        <span id="correct-guess3" class="correct">You Got It!</span>
+        <span id="correct-guess4" class="correct">You Got It!</span>
+        <span id="correct-guess5" class="correct">You Got It!</span>
+    </div>
+
+
+
+
+</body>
+
+</html>

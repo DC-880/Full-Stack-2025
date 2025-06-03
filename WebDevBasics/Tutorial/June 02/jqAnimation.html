@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "red");
+            })
+
+            $("input").blur(function () {
+                $(this).css("background-color", "yellow");
+            })
+
+
+            $("button").click(function () {
+                // $("div").animate({left:'250px'});
+                $("div").fadeIn(8000);
+
+            })
+
+            $("#submit").click(function () {
+                var fname = $("#first_name").val();
+                var pass = $("#password").val();
+                
+
+
+                // if (fname == "" && pass == "") {
+                //     console.log("Both empty")
+                // }
+                // else if (fname == "") {
+                //     alert("missing username")
+                // }
+
+                // else if (pass == "") {
+                //     console.log("missing pass")
+                // }
+
+                
+                
+                if (fname == "") {
+                 $(".error").show();
+            } else {
+                $(".error").hide();
+            }
+
+
+            })
+
+
+            
+
+
+
+
+
+        })
+
+
+
+
+
+    </script>
+    <style>
+        .error{
+            color: red;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="background-color: aqua; height: 100px; width: 100px; position: absolute; display: none;"></div> -->
+    <form action="">
+       <div> Username<input type="text" id="first_name" name="first_name"></div>
+       <div><span class="error">Priovide user</span></div>
+       <div>Password<input type="password" id="password" name="password"></div>
+        <div><span class="error">provide pass</span></div>
+        <button type="button" id="submit">Login</button>
+    </form>
+</body>
+
+</html>
