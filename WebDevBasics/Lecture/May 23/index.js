@@ -45,7 +45,7 @@ function Search(num_list, key) {
         if(num_list[i] === key)
             return `found ${key} at position ${i}`;
 }
-else return `${key} not found`
+else (return `${key} not found`)
 }
 
 
@@ -58,4 +58,3 @@ function Maximum(num_list) {
         }
     }
     return `Maximum number in the list is: ${max}`;
-}
