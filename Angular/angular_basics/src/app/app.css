@@ -1,0 +1,23 @@
+.bg_color {
+    background-color:blueviolet;
+    color:honeydew;
+}
+
+.bold{
+    font-size: large;
+    font-family: fantasy;
+    color: green;
+    font-weight: bold;
+}
+
+.bg_color_again{
+    background-color: burlywood;
+}
+
+.star_wars_size{
+    height: 100px;
+}
+
+.containColor{
+    background-color: bisque;
+}
