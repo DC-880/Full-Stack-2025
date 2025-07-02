@@ -1,0 +1,30 @@
+
+
+<form #customerForm="ngForm" (ngSubmit)="submitCustomerForm(customerForm)">
+    <div class="container">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter name" name="name" [(ngModel)] = "customer.name" required minlength="6" #name="ngModel" >
+    <small id="emailHelp" class="form-text text-muted"></small>
+    @if(name.hasError('required') && name.touched) {
+        <div class="text-danger">
+            Name is required
+        </div>
+    }
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Age</label>
+    <input type="number" class="form-control"  placeholder="Enter Age" name="age" [(ngModel)] = "customer.age" required>
+  </div>
+ <div class="form-group">
+    <label for="exampleInputPassword1">Department</label>
+    <input type="text" class="form-control"  placeholder="Enter Department" name="department" [(ngModel)] = "customer.department" required>
+  </div>
+<!-- 
+  {{ customer | json }} -->
+  
+  <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+</div>
+
+</form>
+

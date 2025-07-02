@@ -1,0 +1,15 @@
+<div class="container">
+
+    <h3>{{house_description}}</h3>
+    @for(house of all_houses; track house.id) {
+        <h3>{{house.city}}</h3>
+    }
+    <h2>{{one_house.city}}</h2>
+
+
+    <div>
+        <label for="" class="form-label">Name:</label>
+        <input type="text" class="form-control" #inputVal>
+        <button type="button" class="btn btn-primary" (click)="submitVal(inputVal.value)">Submit</button>
+    </div>
+</div>

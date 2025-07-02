@@ -1,0 +1,36 @@
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Department</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @for(customer of customers$ | async; track customer.customer_id){
+            <tr>
+                <th scope="row">{{customer.customer_id}}</th>
+                <td>
+                    <a>{{customer.name}}
+                    </a> </td>
+                <td>{{customer.age}}</td>
+                <td>{{customer.department}}</td>
+                <td>
+                    <button type="button" class="btn btn-warning mx-2" [routerLink]="['/customer', customer.customer_id]">Edit</button>
+                    <button type="button" class="btn btn-danger mx-2" (click)="delCust(customer.customer_id)">Delete</button>
+                       
+                </td>
+
+            </tr>
+            }
+
+            <button type="button" (click)="logOut()">Log Out</button>
+
+        </tbody>
+    </table>
+</div>

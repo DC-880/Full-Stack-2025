@@ -1,0 +1,49 @@
+
+
+
+
+
+<form (ngSubmit)="submitSignUp()" [formGroup]="signUpForm">
+  <div class="mb-3" >
+    <label for="inputUsername" class="form-label">Username</label>
+    <input type="text" class="form-control" id="inputUsername" name="username" placeholder="Enter username" formControlName="username"  >
+    @if ( signUpForm.get('username')?.errors?.['required'] && signUpForm.get('username')?.touched) {
+      <div class="text-danger">Please Provide username</div>
+    }
+     @if ( signUpForm.get('username')?.errors?.['minlength'] && signUpForm.get('username')?.touched) {
+      <div class="text-danger">Please Provide username</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="inputPassword" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Enter password" formControlName="password">
+     @if ( signUpForm.get('password')?.errors?.['required'] && signUpForm.get('password')?.touched) {
+      <div class="text-danger">Please Provide password</div>
+    }
+    @if ( signUpForm.get('password')?.errors?.['minlength'] && signUpForm.get('password')?.touched) {
+      <div class="text-danger">Please Provide username</div>
+    }
+  </div>
+  <div class="mb-3">
+    <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="inputConfirmPassword" name="confirm_password" placeholder="Confirm password" formControlName="confirm_password">
+  </div>
+    <div class="mb-3">
+    <label for="inputStatus" class="form-label">Status</label>
+    <input type="number" class="form-control" id="inputStatus" name="status" placeholder="Status" formControlName="status">
+  </div>
+  <!-- <div class="mb-3">
+    <label for="inputName" class="form-label">Name</label>
+    <input type="text" class="form-control" id="inputName" name="name" placeholder="Enter your name" formControlName="name">
+  </div>
+  <div class="mb-3">
+    <label for="inputAge" class="form-label">Age</label>
+    <input type="number" class="form-control" id="inputAge" name="age" placeholder="Enter your age">
+  </div> -->
+  <!-- <div class="mb-3">
+    <label for="inputDepartment" class="form-label">Department</label>
+    <input type="text" class="form-control" id="inputDepartment" name="department" placeholder="Enter your department">
+  </div> -->
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

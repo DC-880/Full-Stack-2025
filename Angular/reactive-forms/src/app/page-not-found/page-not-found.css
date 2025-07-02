@@ -1,0 +1,19 @@
+.bg_image {
+  position: fixed; /* or absolute if needed */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9w-00zDGFh6VtxNsOtRMeflVFF6GQunbMrA&s");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; /* optional: pushes it behind other content */
+}
+
+div{
+    height: 100vh;
+    width: 100vh;
+}
