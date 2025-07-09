@@ -31,7 +31,7 @@ export class App {
 
 
   color_purple = "bg_color";
-  color_yellow = "yellow";
+  color_yellow = "green";
   errors = true;
 
   isDisabled = false;

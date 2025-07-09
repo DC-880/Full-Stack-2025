@@ -6,65 +6,117 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
 <div class="bg_color">
 
-<div [ngClass]="['container', 'containColor']">
+  <div [ngClass]="['container', 'containColor']">
 
-  <h1 [style.backgroundColor]="color_yellow">Hello, {{ title }}</h1>
+    <h1 [style.backgroundColor]="color_yellow">Hello, {{ title }}</h1>
 
-  <h2 class="bg_color">my name is {{ my_name }} and age is {{ my_age}}</h2>
+    <h2 class="bg_color">my name is {{ my_name }} and age is {{ my_age}}</h2>
 
-  <h2>{{persons[1].id + persons[2].name}}</h2>
+    <h2>{{persons[1].id + persons[2].name}}</h2>
 
-  <p>Congratulations! Your app is running. 🎉</p>
 
-  <div>
-    <p [ngClass]="['bg_color_again', 'bold']">testibng ng class</p>
-  </div>
 
-  <div>
-    <h2 [ngClass]="['bg_color_again', 'bold']">testibng ng class</h2>
-    <h3 [ngClass]=" errors ? 'error' : 'bg_color' ">Conditional Classes</h3>
-  </div>
+    <div>
+      <p [ngClass]="['bg_color_again', 'bold']">testibng ng class</p>
+    </div>
 
-  <div>
-    <input type="text" class="form-control" [ngModel]="my_name">
-    <input type="text" class="form-control" [(ngModel)]="my_name">
-  </div>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
 
-  <ul class="list-group">@for (person of persons; track person.id){
-    <li class="list-group-item">{{person.id + person.name}}</li>
+    <div class="form-floating mb-3">
 
-    <ul>@if (person.age > 18) {
-      <p>person is adult</p>
-      } @else {
-      <p>person is too young</p>
+      <input type="text" class="form-control" placeholder="name@example.com">
+      <label for="floatingInput">Name</label>
+      <input type="text" class="form-control" [(ngModel)]="my_name">
+    </div>
+
+    <div>
+      <h2 [ngClass]="['bg_color_again', 'bold']">testibng ng class</h2>
+      <h3 [ngClass]=" errors ? 'error' : 'bg_color' ">Conditional Classes</h3>
+    </div>
+
+
+
+    <ul class="list-group">@for (person of persons; track person.id){
+      <li class="list-group-item">{{person.id + person.name}}</li>
+
+      <ul>@if (person.age > 18) {
+        <p>person is adult</p>
+        } @else {
+        <p>person is too young</p>
+        }
+      </ul>
+
       }
     </ul>
 
+    <button (click)="disabled(!isDisabled)">making larger</button>
+
+    @if (isDisabled == true){
+    <img class="star_wars_size" [src]="img1">
+    }@else {
+    <img class="star_wars_size" [src]="img2">
     }
-  </ul>
-
-  <button (click)="disabled(!isDisabled)">making larger</button>
-
-  @if (isDisabled == true){
-  <img class="star_wars_size" [src]="img1">
-  }@else {
-  <img class="star_wars_size" [src]="img2">
-  }
 
 
+    <h1>text</h1>
 
 
-
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  <app-home></app-home>
-</div>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <app-home></app-home>
+  </div>
 </div>
 <router-outlet />
